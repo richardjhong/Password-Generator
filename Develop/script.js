@@ -36,7 +36,7 @@ var captureCharacterTypes = function() {
   while (noneSelected) {
     charTypes.lowercase = confirm("Include lowercase characters?")
     charTypes.uppercase = confirm("Include uppercase characters?")
-    charTypes.numbers = confirm("Include numbers characters?")
+    charTypes.numbers = confirm("Include numeric characters?")
     charTypes.specialChars = confirm("Include special characters?")
 
     if (charTypes.lowercase || charTypes.uppercase || charTypes.numbers ||charTypes.specialChars) {
@@ -102,7 +102,7 @@ var shuffleArray = function(array) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
   }
-  
+
   return array
 }
 
