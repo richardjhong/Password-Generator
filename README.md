@@ -58,7 +58,7 @@ possibleCharCombinations handles two things in particular:
 
 
 ### generatePassword
-At line 117 of script.js, generatePassword will have a password length, and an object of the the reference characters allowed in the password and the start of the password. The password will be filled with randomized characters from the reference. charCom until it is the appropriate length. Finally from here, the password will go through one cycle of the shuffleArray function (I found this function within this [Stackoverflow article](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+At line 117 of script.js, generatePassword will have a password length, and an object of the the reference characters allowed in the password and the start of the password. The password will be filled with randomized characters from the reference. charCom until it is the appropriate length. Finally from here, the password will go through one cycle of the shuffleArray function. I found this function within this [Stackoverflow article](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 
 ### shuffleArray
 Refer to above
