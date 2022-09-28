@@ -22,12 +22,12 @@ At a high level, Password Generator does the following steps:
 
 At a much more detailed look:
 
-[writePassword] (###writePassword)
-[validatePasswordLength] (###validatePasswordLength)
-[captureCharacterTypes] (###captureCharacterTypes)
-[possibleCharCombinations] (###possibleCharCombinations)
-[generatePassword] (###generatePassword)
-[shuffleArray] (###shuffleArray)
+- writePassword
+- validatePasswordLength
+- captureCharacterTypes
+- possibleCharCombinations
+- generatePassword
+- shuffleArray
 
 ### writePassword
 writePassword could be considered the main function of the app that has generatePassword within, which in turn has multiple helper functions. Within writePassword, generatePassword is invoked. From there, the output is then passed as the value of passwordText for the #password text area.
