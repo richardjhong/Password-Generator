@@ -68,3 +68,6 @@ Refer to above
 
 Screenshot is with 34 password length and enabling lowercase, uppercase, numeric, and special characters.
 
+## Livesite
+[Deployed on Github page](https://richardjhong.github.io/Password-Generator/)
+
