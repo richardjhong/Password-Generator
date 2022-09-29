@@ -6,17 +6,18 @@ var generateBtn = document.querySelector("#generate");
 var validatePasswordLength = function() {
   var num = parseInt(prompt("Input password length between 8 and 128."), 10)
 
-  if (Number.isNaN(num)) {
-    while (Number.isNaN(num)) {
+  while (Number.isNaN(num) || (num < 8 || num > 128)) {
+
+    if (Number.isNaN(num)) {
       num = parseInt(prompt("Invalid entry. Input a password length between 8 and 128. Choose again (number input only)."), 10)
     }
-  }
 
-  if (num < 8 || num > 128) {
-    while (num < 8 || num > 128) {
+    if (num < 8 || num > 128) {
       num = parseInt(prompt("Invalid number range. Input a password length between 8 and 128."), 10)
     }
+
   }
+
 
   return num
 }
