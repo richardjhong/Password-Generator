@@ -63,3 +63,8 @@ At line 117 of script.js, generatePassword will have a password length, and an o
 ### shuffleArray
 Refer to above
 
+## Screenshot
+[Screenshot](./assets/images/screenshot.png)
+
+Screenshot is with 34 password length and enabling lowercase, uppercase, numeric, and special characters.
+
