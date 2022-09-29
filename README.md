@@ -15,8 +15,8 @@ Upon generating the password and shuffling characters in one pass, the password 
 ## Architecture
 
 At a high level, Password Generator does the following steps:
-  - Upon clicking the Generate Password button, the first prompt asks the user for a password length
-  - If user's input is validated, the next few prompts capture what characters the user wants included in the password
+  - Upon clicking the Generate Password button, the first prompt asks the user for a password length.
+  - If user's input is validated, the next few prompts capture what characters the user wants included in the password.
   - From there, the start of a password is generated and appends more characters until the password length is reached.
   - The app will then shuffle once and then display the password afterwards.
 
@@ -36,25 +36,25 @@ writePassword could be considered the main function of the app that has generate
 validatePasswordLength is invoked at the beginning of generatePassword. This helper function does the following:
   - prompts the user for a numeric password length between 8 and 128 characters.
   - does a validation check to see if A. the input is a number B. if the number is between the 8 and 128 range. 
-    - if the validation check fails, the user is prompted again with instructions on why the previous input failed and will continue to prompt the user again until user provides a valid input
+    - if the validation check fails, the user is prompted again with instructions on why the previous input failed and will continue to prompt the user again until user provides a valid input.
   - once the user has successfully given a valid input, the number is returned to generatePassword function.
 
 ### captureCharacterTypes
 captureCharacterTypes is invoked after validatePasswordLength within generatePassword. This helper function does the following:
-  - prompts the user on 4 confirm/cancel dialogs
+  - prompts the user on 4 confirm/cancel dialogs:
     - include lowercase characters?
     - include uppercase characters?
     - include numeric characters?
     - include special characters?
   - again, a validation check is done to see that at least one of the four options is confirmed and therefore selected. 
-    - if the validation check fails, the user is alerted that one character type must be included and restarts the chain of 4 confirm/cancel dialogs
+    - if the validation check fails, the user is alerted that one character type must be included and restarts the chain of 4 confirm/cancel dialogs.
   - once the user has successfully given valid input, the charTypes object is returned to the generatePassword function.
 
 ### possibleCharCombinations
 possibleCharCombinations handles two things in particular:
-  - based on the previous output of captureCharacterTypes, this function will then insert one randomized character of each of the confirmed option subsects to the beginning of the password.
+  - based on the previous output of captureCharacterTypes, this function will then insert one randomized character of each of the confirmed option subsects to the beginning of the password to automatically meet the baseline requirement of having at least one of each confirmed character subsect.
   - also based on the previous output of captureCharacterTypes, this function will then merge different subsects of strings into one large string to have every possible character allowed.
-  - this funciton finally returns an object with the char(acter)Com(binations) and password so far
+  - this function finally returns an object with the character combinations string and password so far.
 
 
 ### generatePassword
