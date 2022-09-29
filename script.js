@@ -104,7 +104,7 @@ var shuffleArray = function(array) {
   return array
 }
 
-// "Main" function that procedurally captures inputs to define limits on 
+// Function that procedurally captures inputs to define limits on 
 // making password, picks up on reference.password and fills in the 
 // remaining chars needed to fill password length, and finally goes through
 // shuffling once more to randomize password
